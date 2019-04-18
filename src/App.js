@@ -11,8 +11,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>hello</h1>
+      <div className="App container">
+        <h1 className="center blue-text">Todo's</h1>
         <TodoUI todoArray={this.state.todos} />
       </div>
     );
