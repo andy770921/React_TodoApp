@@ -1,10 +1,10 @@
 import React from 'react';
 
-const TodoUI = ({todoArray}) => {
-    const JSX_UI = todoArray.length ? (todoArray.map( element => { 
+const TodoUI = (props) => {
+    const JSX_UI = props.todoArray.length ? (props.todoArray.map( element => { 
         return (
         <div className="collection-item" key={element.id}>
-            <span>{element.content}</span>
+            <span onClick={() => props.deleteTodoFunc(element.id)}>{element.content}</span>
         </div>)
     })) : (
            <p className="center">You have no todo's left!</p>
