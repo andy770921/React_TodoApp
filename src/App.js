@@ -9,8 +9,10 @@ class App extends Component {
     ]
   };
   deleteTodo = (id) => {
-    console.log(id);
-
+    const todosArray = this.state.todos.filter( element => {
+      return element.id !== id;
+    });
+    this.setState({todos: todosArray});
   };
   render() {
     return (
