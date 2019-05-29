@@ -1,5 +1,8 @@
 import React from 'react';
 
+//以下用props寫，也可用解構賦值寫
+//const TodoUI = ({todoArray, deleteTodoFunc}) => ...
+//若用解構賦值，以後不用寫props.todoArray.length,可直接寫todoArray.length
 const TodoUI = (props) => {
     const JSX_UI = props.todoArray.length ? (props.todoArray.map( element => { 
         return (
